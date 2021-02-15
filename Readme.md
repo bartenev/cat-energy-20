@@ -1,6 +1,6 @@
-# Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Кэт энерджи» 
 
-* Студент: [Самир Поладов](https://up.htmlacademy.ru/adaptive/20/user/1487923).
+* Студент: `Неизвестно`.
 * Наставник: `Неизвестно`.
 
 ---
