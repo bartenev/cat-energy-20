@@ -1,6 +1,11 @@
 .button {
+  display: block;
+
+  padding: 7px;
+
   .font-size(16px, 20px);
   color: @basic-white;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   background-color: @basic-green;
@@ -11,5 +16,18 @@
 
   &:active {
     color: rgba(@basic-white, 0.3);
+  }
+
+  &--grey {
+  color: @grey-1;
+  background-color: @grey-11;
+  }
+
+  &--grey:hover {
+    background-color: @grey-10;
+  }
+
+  &--grey:active {
+    color: rgba(@grey-1, 0.3);
   }
 }

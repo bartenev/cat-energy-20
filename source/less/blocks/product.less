@@ -1,0 +1,43 @@
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "picture title"
+  "picture descrpition"
+  "buy-button buy-button";
+  grid-row-gap: 13px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid @grey-10;
+}
+
+.product__link--img {
+  grid-area: picture;
+}
+
+.product__link--title {
+  .font-size(16px, 20px);
+  text-transform: uppercase;
+  color: @light-black;
+}
+
+.product__title {
+  font-weight: 400;
+}
+
+.product__link {
+  text-decoration: none;
+}
+
+.product__characteristics {
+  .font-family-alt();
+  .font-size(12px, 16px);
+  color: @grey-1;
+}
+
+.product__definition {
+  text-align: right;
+}
+
+.product__buy {
+  grid-area: buy-button;
+}
