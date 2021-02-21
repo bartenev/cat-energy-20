@@ -1,13 +1,32 @@
 .site-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
   list-style: none;
+
 }
 
 .site-list__item {
+  position: relative;
+  padding: 24px 0;
   .font-size(20px, 20px);
   font-weight: 500;
   color: @basic-black;
   text-transform: uppercase;
+  text-align: center;
+  border-top: 1px solid @grey-10;
 
+
+  // &::before {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 1px;
+  //   content: "";
+  //   background-color: @grey-10;
+  // }
 }
 
 .site-list__link {

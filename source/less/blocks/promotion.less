@@ -1,0 +1,27 @@
+.promotion {
+  position: relative;
+  height: 289px;
+  background-color: @basic-green;
+
+  &::before {
+    position: absolute;
+    top: 58px;
+    left: calc(50% - 39px);
+    width: 78px;
+    height: 80px;
+    content: "";
+    background-image: url(../img/icon_gift.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.promotion__desrciption {
+  display: block;
+  padding: 186px 50px 43px;
+  .font-family-alt();
+  .font-size(16px, 20px);
+  text-align: center;
+  color: @basic-white;
+
+}

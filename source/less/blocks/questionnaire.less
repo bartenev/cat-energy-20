@@ -1,0 +1,135 @@
+.questionnaire {
+
+}
+
+.questionnaire__form {
+  padding-bottom: 32px;
+}
+
+.questionnaire__title {
+  margin-bottom: 37px;
+}
+
+.questionnaire__description {
+  margin: 0;
+  margin-bottom: 39px;
+  .font-size(14px, 18px);
+  text-transform: uppercase;
+
+}
+
+.questionnaire__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &:not(:last-of-type) {
+    padding-bottom: 27px;
+  }
+}
+
+.questionnaire__legend {
+  padding: 0;
+  margin-bottom: 34px;
+  .font-size(24px, 26px);
+
+}
+
+.questionnaire__list {
+  display: grid;
+  grid-row-gap: 13px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &--without-legend {
+    padding: 21px 0;
+  }
+}
+
+.questionnaire__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.questionnaire__label {
+  position: relative;
+  .font-size(16px, 18px);
+  color: @grey-1;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
+
+  &--radio,
+  &--checkbox {
+    padding: 6px 0;
+    padding-left: 46px;
+    color: @light-black;
+  }
+
+    &--radio::before,
+    &--checkbox::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    content: "";
+
+    border: 1px solid @grey-8;
+    border-radius: 50%;
+  }
+
+  &--checkbox::before {
+    border-radius: 0;
+  }
+
+  &--text {
+    margin-right: 13px;
+  }
+}
+
+.questionnaire__input {
+  font-family: inherit;
+  .font-size(16px, 18px);
+  color: @grey-1;
+  text-transform: uppercase;
+
+  &--type--text {
+    flex-grow: 1;
+    padding: 12px 14px;
+    border: 1px solid @grey-8;
+  }
+
+  &--type--text--comment {
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    resize: none;
+  }
+
+  &--type--radio:checked + .questionnaire__label::after {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 14px;
+    height: 14px;
+    content: "";
+
+    background-color: @basic-green;
+    border-radius: 50%;
+  }
+}
+
+.questionnaire__button {
+  margin: 34px 0 21px;
+}
+
+.questionnaire__footnote {
+  display: flex;
+  justify-content: center;
+  .font-family-alt();
+  .font-size(14px, 16px);
+}
