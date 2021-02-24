@@ -1,8 +1,82 @@
 .selection-of-nutrition-program {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 480px;
   color: white;
+  text-align: center;
+
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 305px;
+    content: "";
+    background-color: @basic-green;
+    z-index: -1;
+  }
+}
+
+.selection-of-nutrition-program__wrapper {
+  margin: 0 auto;
+}
+
+.selection-of-nutrition-program__title {
+  width: 249px;
 }
 
 .selection-of-nutrition-program__slogan {
   .font-size(14px, 14px);
   text-transform: uppercase;
+}
+
+  .selection-of-nutrition-program__button {
+    margin-top: auto;
+  }
+
+@media (min-width: @tablet-width) {
+
+  .selection-of-nutrition-program {
+    height: max-content;
+    color: @basic-black;
+    text-align: left;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .selection-of-nutrition-program__wrapper {
+    margin: 0 117px;
+  }
+
+  .selection-of-nutrition-program__title {
+    width: 415px;
+  }
+
+  .selection-of-nutrition-program__button {
+    margin-top: 0;
+    width: max-content;
+    padding: 14px 26px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .selection-of-nutrition-program {
+    position: static;
+    &::before {
+      display: block;
+      left: 50%;
+      width: 50%;
+      height: 692px;
+    }
+  }
+
+  .selection-of-nutrition-program__wrapper {
+    width: 1220px;
+    margin: 0 auto;
+    padding-left: 78px;
+  }
 }

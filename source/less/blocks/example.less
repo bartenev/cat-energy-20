@@ -2,6 +2,10 @@
   background-color: @grey-9;
 }
 
+.example__wrapper {
+  margin: 0 20px;
+}
+
 .example__list {
   list-style: none;
 }
@@ -32,4 +36,17 @@
   .font-size(16px, 20px);
   text-transform: uppercase;
   border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .example__wrapper {
+    margin: 0 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+  }
 }
