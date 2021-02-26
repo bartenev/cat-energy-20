@@ -41,3 +41,29 @@
 .product__buy {
   grid-area: buy-button;
 }
+
+@media (min-width: @tablet-width) {
+
+  .product {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "picture"
+    "title"
+    "descrpition"
+    "buy-button";
+    padding: 40px;
+    padding-top: 160px;
+    background-color: @grey-11;
+    border: none;
+  }
+
+  .product__title {
+    text-align: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+  .product {
+  }
+}

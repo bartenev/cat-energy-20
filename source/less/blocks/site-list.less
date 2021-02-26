@@ -44,6 +44,10 @@
     font-weight: 400;
     border: none;
   }
+
+  .site-list__item--active {
+    border-bottom: 2px solid @basic-green;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -53,6 +57,13 @@
 
   .site-list__item {
     .font-size(20px, 30px);
+  }
+
+  .site-list__item--white {
     color: @basic-white;
   }
+
+  .site-list__item--active.site-list__item--white {
+  border-bottom: 2px solid @basic-white;
+}
 }

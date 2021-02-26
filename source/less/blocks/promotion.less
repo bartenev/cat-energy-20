@@ -17,11 +17,46 @@
 }
 
 .promotion__desrciption {
-  display: block;
-  padding: 186px 50px 43px;
+  position: absolute;
+  top: 186px;
+  right: calc(50% - 80px);
+  margin: 0;
   .font-family-alt();
   .font-size(16px, 20px);
   text-align: center;
   color: @basic-white;
 
+}
+
+@media (min-width: @tablet-width) {
+  .promotion {
+    height: 200px;
+
+    &::before {
+      top: 57px;
+      left: 78px;
+    }
+  }
+
+  .promotion__desrciption {
+    top: 70px;
+    right: 124px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promotion {
+    height: 289px;
+
+    &::before {
+      left: calc(50% - 39px);
+    }
+  }
+
+  .promotion__desrciption {
+    top: 186px;
+    right: calc(50% - 80px);
+    text-align: center;
+  }
 }

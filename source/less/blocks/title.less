@@ -1,6 +1,12 @@
 .title {
   margin: 0;
   padding: 27px 0;
-  .font-size(36px, 36px);
+  .font-size(36px, 40px);
   font-weight: 400;
+}
+
+@media (min-width: @tablet-width) {
+  .title {
+    .font-size(60px, 60px);
+  }
 }
