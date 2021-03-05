@@ -9,23 +9,23 @@
 
   <body class="page__body body">
     <header class="page-header">
-      <nav class="main-nav main-nav__wrapper">
+      <nav class="main-nav main-nav--closed main-nav--nojs main-nav__wrapper">
         <div class="main-nav__toolbar">
           <a class="main-nav__logo">
-            <img class="logo" src="img/logo-mobile.svg" width="" height="" alt="Cat energy">
+            <img class="logo" src="img/temp.svg" width="191" height="38" alt="Cat energy">
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
         <ul class="site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item site-list__item--white site-list__item--active">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--white">
             <a class="site-list__link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--white">
             <a class="site-list__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
@@ -42,7 +42,7 @@
             <ul class="products__list">
               <li class="products__item product">
                 <a class="product__link product__link--img" href="blank.html">
-                  <img src="" width="" height="" alt="">
+                  <img class="product__img" src="../img/temp.svg" width="68" height="86" alt="">
                 </a>
                 <a class="product__link product__link--title" href="blank.html">
                   <h3 class="product__title">Cat Energy PRO 500 г</h3>
@@ -65,7 +65,7 @@
               </li>
               <li class="products__item product">
                 <a class="product__link product__link--img" href="blank.html">
-                  <img src="" width="" height="" alt="">
+                  <img class="product__img" src="../img/temp.svg" width="85" height="101" alt="">
                 </a>
                 <a class="product__link product__link--title" href="blank.html">
                   <h3 class="product__title">Cat Energy PRO 1000&nbsp;г</h3>
@@ -88,7 +88,7 @@
               </li>
               <li class="products__item product">
                 <a class="product__link product__link--img" href="blank.html">
-                  <img src="" width="" height="" alt="">
+                  <img class="product__img" src="../img/temp.svg" width="68" height="76" alt="">
                 </a>
                 <a class="product__link product__link--title" href="blank.html">
                   <h3 class="product__title">Cat Energy PRO 500 г</h3>
@@ -111,7 +111,7 @@
               </li>
               <li class="products__item product">
                 <a class="product__link product__link--img" href="blank.html">
-                  <img src="" width="" height="" alt="">
+                  <img class="product__img" src="../img/temp.svg" width="84" height="101" alt="">
                 </a>
                 <a class="product__link product__link--title" href="blank.html">
                   <h3 class="product__title">Cat Energy PRO 1000 г</h3>
@@ -134,7 +134,7 @@
               </li>
               <li class="products__item product">
                 <a class="product__link product__link--img" href="blank.html">
-                  <img src="" width="" height="" alt="">
+                  <img class="product__img" src="../img/temp.svg" width="68" height="76" alt="">
                 </a>
                 <a class="product__link product__link--title" href="blank.html">
                   <h3 class="product__title">Cat Energy SLIM 500 г</h3>
@@ -157,7 +157,7 @@
               </li>
               <li class="products__item product">
                 <a class="product__link product__link--img" href="blank.html">
-                  <img src="" width="" height="" alt="">
+                  <img class="product__img" src="../img/temp.svg" width="84" height="100" alt="">
                 </a>
                 <a class="product__link product__link--title" href="blank.html">
                   <h3 class="product__title">Cat Energy SLIM 1000 г</h3>
@@ -180,7 +180,7 @@
               </li>
               <li class="products__item product">
                 <a class="product__link product__link--img" href="blank.html">
-                  <img src="" width="" height="" alt="">
+                  <img class="product__img" src="../img/temp.svg" width="72" height="84" alt="">
                 </a>
                 <a class="product__link product__link--title" href="blank.html">
                   <h3 class="product__title">Cat Energy SLIM 500 г</h3>
@@ -262,7 +262,7 @@
         </section>
         <section class="page-footer__contacts contacts">
           <div class="contacts__wrapper">
-            <img src="" weight="" height="" alt="Cat energy">
+            <img src="img/temp.svg" weight="128" height="24" alt="Cat energy">
             <ul class="contacts__social social">
               <li class="social__item">
                 <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Вконтакте">
@@ -282,11 +282,27 @@
             </ul>
             <a class="contacts__copyright" href="">
               <span>HTML Academy</span>
-              <img src="" width="" height="" alt="">
+              <img src="img/temp.svg" width="27" height="34" alt="">
             </a>
           </div>
         </section>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.remove('main-nav--opened');
+          navMain.classList.add('main-nav--closed');
+        }
+      })
+    </script>
   </body>
 </html>

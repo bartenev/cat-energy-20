@@ -12,14 +12,39 @@
 }
 
 .nutrition-program__item {
+  position: relative;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 22px;
   background-color: @grey-11;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 50px;
+    height: 50px;
+
+    background-color: @basic-green;
+    border-radius: 50%;
+  }
 }
 
 .nutrition-program__title {
   margin: 0;
+  margin-bottom: 29px;
+  padding-left: 71px;
   .font-size(24px, 37px);
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.nutrition-program__description {
+  margin: 0;
+  margin-bottom: 19px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid @grey-12;
 }
 
 .nutrition-program__link {
@@ -38,6 +63,34 @@
     margin: 0 30px;
     margin-top: 0;
   }
+
+  .nutrition-program__item {
+    min-height: 372px;
+    box-sizing: border-box;
+    padding-top: 77px;
+    padding-bottom: 57px;
+    padding-left: 52px;
+    padding-right: 279px;
+
+    &::before {
+      top: 92px;
+      left: auto;
+      right: 62px;
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .nutrition-program__title {
+    margin-bottom: 24px;
+    padding-left: 0;
+  }
+
+  .nutrition-program__description {
+    margin-bottom: 52px;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -50,5 +103,27 @@
   .nutrition-program__list {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 80px;
+  }
+
+  .nutrition-program__item {
+    padding-bottom: 59px;
+    padding-right: 52px;
+
+    &::before {
+      top: 47px;
+      left: 52px;
+      right: auto;
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .nutrition-program__title {
+    margin-bottom: 73px;
+    padding-left: 162px;
+  }
+
+  .nutrition-program__description {
+    margin-bottom: 27px;
   }
 }
