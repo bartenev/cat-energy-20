@@ -1,5 +1,6 @@
 .map {
   position: relative;
+  margin-bottom: -3px;
 }
 
 .map__wrapper {
@@ -9,19 +10,27 @@
 .map__description {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-top: 28px;
+  padding-bottom: 26px;
   background-color: @basic-white;
 }
 
 .map__invitation {
-  .font-size(16px, 18px);
+  margin: 0;
+  .font-size(16px, 20px);
   text-transform: uppercase;
   color: @dark-black;
 }
 
 .map__address {
+  margin: 0;
   .font-family-alt();
   .font-size(14px, 20px);
   color: @grey-1;
+}
+
+.map__frame {
+  border: none;
 }
 
 @media (min-width: @tablet-width) {

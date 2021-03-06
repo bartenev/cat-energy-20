@@ -1,4 +1,6 @@
 .example {
+  padding-top: 27px;
+  padding-bottom: 26px;
   background-color: @grey-9;
 }
 
@@ -7,35 +9,63 @@
 }
 
 .example__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 31px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .example__item {
+  margin-bottom: 34px;
+  height: 56px;
+  box-sizing: border-box;
+  padding-top: 13px;
   border: 1px solid @grey-5;
   border-radius: 3px;
+}
+
+.example__title {
+  margin-bottom: 33px;
+}
+
+.example__text {
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .example__number {
   .font-size(24px, 24px);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .example__description {
+  position: relative;
+  top: 9px;
+  margin: 0 auto;
+  padding-right: 5px;
+  padding-left: 5px;
+  width: 87px;
+  box-sizing: border-box;
   .font-family-alt();
   .font-size(12px, 12px);
   color: @grey-1;
+  text-align: center;
+  background-color: @grey-9;
 }
 
 .example__expenses {
+  margin: 0;
+  margin-bottom: 42px;
   .font-size(14px, 20px);
   text-transform: uppercase;
+  text-align: center;
 }
 
-.slider__button {
-  font-family: inherit;
-  .font-size(16px, 20px);
-  text-transform: uppercase;
-  border: none;
+.example__slider {
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {

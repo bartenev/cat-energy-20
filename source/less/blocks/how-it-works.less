@@ -3,6 +3,11 @@
   margin: 0 20px;
 }
 
+.how-it-works {
+  padding-top: 27px;
+  padding-bottom: 42px;
+}
+
 .how-it-works__list {
   display: grid;
   grid-row-gap: 20px;
@@ -13,17 +18,22 @@
 
 .how-it-works__item {
   position: relative;
+  min-height: 60px;
   padding-left: 80px;
 
-  // &::before {
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 60px;
-  //   height: 60px;
-  //   background-color: @basic-green;
-  //   content: "";
-  // }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @basic-green;
+    content: "";
+  }
+}
+
+.how-it-works__title {
+  margin-bottom: 39px;
 }
 
 .how-it-works__description {
