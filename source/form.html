@@ -9,10 +9,10 @@
 
   <body class="page__body body">
     <header class="page-header">
-      <nav class="main-nav main-nav__wrapper">
+      <nav class="main-nav main-nav--closed main-nav--nojs main-nav__wrapper">
         <div class="main-nav__toolbar">
           <a class="main-nav__logo">
-            <img class="logo" src="img/logo-mobile.svg" width="" height="" alt="Cat energy">
+            <img class="logo" src="img/temp.svg" width="191" height="38" alt="Cat energy">
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -37,10 +37,13 @@
         <div class="questionnaire">
           <div class="questionnaire__wrapper">
             <h1 class="questionnaire__title title">Подбор программы</h1>
-            <p class="questionnaire__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+            <p class="questionnaire__description">
+              Заполните анкету, и мы подберем<br>
+              программу питания для вашего кота
+            </p>
           </div>
           <form class="questionnaire__form" method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="questionnaire__fieldset">
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--without-legend">
               <div class="questionnaire__wrapper">
                 <ul class="questionnaire__list">
                   <li class="questionnaire__item">
@@ -58,7 +61,7 @@
                 </ul>
               </div>
             </fieldset>
-            <fieldset class="questionnaire__fieldset questionnaire__fieldset--without-legend">
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--with-border">
               <div class="questionnaire__wrapper">
                 <ul class="questionnaire__list">
                   <li class="questionnaire__item">
@@ -76,8 +79,11 @@
                 </ul>
               </div>
             </fieldset>
-            <fieldset class="questionnaire__fieldset">
-              <legend class="questionnaire__legend subtitle">Контактные данные (владельца кота)</legend>
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--with-legend">
+              <h2 class="questionnaire__legend subtitle">
+                Контактные данные<br>
+                (владельца кота)
+              </h2>
               <div class="questionnaire__wrapper">
                 <ul class="questionnaire__list">
                   <li class="questionnaire__item">
@@ -91,14 +97,14 @@
                 </ul>
               </div>
             </fieldset>
-            <fieldset class="questionnaire__fieldset">
-              <legend class="questionnaire__legend subtitle">Комментарий</legend>
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--with-legend">
+              <h2 class="questionnaire__legend subtitle">Комментарий</h2>
               <div class="questionnaire__wrapper">
                 <textarea class="questionnaire__input questionnaire__input--type questionnaire__input--type--text questionnaire__input--type--text--comment" name="comment" id="form-comment" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
             </fieldset>
-            <fieldset class="questionnaire__fieldset">
-              <legend class="questionnaire__legend subtitle">Дополнительно</legend>
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--with-legend">
+              <h2 class="questionnaire__legend subtitle">Дополнительно</h2>
               <div class="questionnaire__wrapper">
                 <ul class="questionnaire__list">
                   <li class="questionnaire__item">
@@ -106,12 +112,12 @@
                     <label class="questionnaire__label questionnaire__label--checkbox" for="form-sweetener">Cахарозаменитель</label>
                   </li>
                   <li class="questionnaire__item">
-                    <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--checkbox visually-hidden" name="milk" id="form-milk" type="checkbox">
-                    <label class="questionnaire__label questionnaire__label--checkbox" for="form-milk">Молоко</label>
-                  </li>
-                  <li class="questionnaire__item">
                     <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--checkbox visually-hidden" name="water" id="form-water" type="checkbox">
                     <label class="questionnaire__label questionnaire__label--checkbox" for="form-water">Питьевая вода</label>
+                  </li>
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--checkbox visually-hidden" name="milk" id="form-milk" type="checkbox">
+                    <label class="questionnaire__label questionnaire__label--checkbox" for="form-milk">Молоко</label>
                   </li>
                   <li class="questionnaire__item">
                     <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--checkbox visually-hidden" name="vitamins" id="form-vitamins" type="checkbox">
@@ -120,7 +126,9 @@
                 </ul>
               </div>
             </fieldset>
-            <button class="questionnaire__button button" type="submit">Отправить заявку</button>
+            <div class="questionnaire__wrapper">
+              <button class="questionnaire__button button" type="submit">Отправить заявку</button>
+            </div>
             <small class="questionnaire__footnote">* — Обязательные поля</small>
           </form>
         </div>
@@ -132,18 +140,24 @@
         <section class="page-footer__map map">
           <h2 class="visually-hidden">Как до нас добраться?</h2>
           <div class="map__description map__wrapper">
-            <p class="map__invitation">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="map__invitation">
+              Приглашаем<br>
+              к сотрудничеству<br>
+              дилеров!
+            </p>
             <p class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
           </div>
-          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.32085871617598!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613564100023!5m2!1sru!2sru" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.32085871617598!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613564100023!5m2!1sru!2sru" width="100%" height="362" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
         <section class="page-footer__contacts contacts">
           <div class="contacts__wrapper">
-            <img src="" weight="" height="" alt="Cat energy">
+            <div class="contacts__logo">
+              <img src="img/temp.svg" width="128" height="24" alt="Cat energy">
+            </div>
             <ul class="contacts__social social">
               <li class="social__item">
                 <a class="social__link" href="https://vk.com/htmlacademy" aria-label="Вконтакте">
-                  <svg class="social__img" width="28" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.09 5.49c0-.86.51-1.32 1.54-1.38l3.97.02c.27 0 .44.13.53.38.41 1.26.87 2.34 1.38 3.26.5.9 1.16 1.96 1.98 3.15.07.15.19.23.35.23.12 0 .22-.06.29-.18l.08-.27.03-4.36c0-.3-.08-.5-.23-.6-.15-.1-.43-.17-.84-.22-.32-.06-.48-.24-.48-.56 0-.07.01-.12.03-.15.37-1.09 1.44-1.63 3.2-1.63l1.49-.03c.67 0 1.23.16 1.68.48.44.32.66.82.66 1.5v5.72c.13.08.24.12.35.12.26 0 .5-.15.7-.45 1.94-2.58 3-4.3 3.16-5.18l.05-.13c.13-.25.33-.47.62-.65.28-.19.53-.31.74-.38a.55.55 0 01.24-.05h4.13l.27.03c.35 0 .63.16.83.47.07.1.11.21.14.33a2.42 2.42 0 01.07.56v.17a6.1 6.1 0 01-.95 2.2c-.5.78-1.15 1.62-1.93 2.53-.78.9-1.27 1.5-1.46 1.78-.16.2-.24.39-.24.56 0 .13.07.28.2.45l3.9 4.63c.21.27.32.56.32.88 0 .38-.16.7-.48.95-.32.25-.7.4-1.15.43l-.45.03H20.66a.86.86 0 01-.11.02c-.4 0-.76-.16-1.1-.48l-2.5-2.96a1.38 1.38 0 00-.37-.33 38.47 38.47 0 00-.54 2.24l-.08.42a1.4 1.4 0 01-1.11 1.06l-.38.03h-2.6c-1.48 0-2.95-.64-4.42-1.92a19.3 19.3 0 01-3.95-4.94A47.52 47.52 0 01.22 6.22a1.92 1.92 0 01-.13-.73zm16 6.51c-.37 0-.7-.1-1-.29a.9.9 0 01-.46-.79V5.14c0-.34-.09-.58-.26-.72-.18-.14-.5-.21-.94-.21l-1.52.05c-.76 0-1.34.12-1.73.37.78.36 1.18.93 1.18 1.71v4.43a1.5 1.5 0 01-.54 1.04c-.32.28-.67.42-1.06.42-.54 0-.94-.24-1.23-.73a26.16 26.16 0 01-3.09-5.63L5.2 5.2 1.66 5.2c-.23 0-.36.01-.39.04-.03.02-.04.1-.04.21 0 .15.02.31.05.48l.56 1.4c1.5 3.64 3.12 6.51 4.87 8.6 1.75 2.1 3.46 3.15 5.15 3.15h2.67c.1 0 .18-.03.24-.09.05-.06.1-.17.13-.34l.05-.25.5-2.21c.15-.3.27-.5.38-.6.2-.19.43-.28.7-.28.42 0 .86.24 1.3.73l2.26 2.71c.15.22.3.33.46.33h4.4c.53 0 .8-.13.8-.38a.47.47 0 00-.09-.25L21.8 13.9c-.3-.35-.45-.73-.45-1.13 0-.4.14-.79.42-1.16.23-.33.68-.9 1.35-1.67.66-.78 1.25-1.51 1.74-2.19.5-.68.83-1.3.99-1.85l.08-.32a.37.37 0 01-.03-.17c0-.07 0-.14-.02-.19h-4.19c-.26.1-.48.25-.64.46l-.16.47c-.44 1.16-1.6 2.95-3.49 5.36-.37.34-.8.5-1.3.5z" fill="#666"/></svg>
+                  <svg class="social__img social__img--vk" width="28" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.09 5.49c0-.86.51-1.32 1.54-1.38l3.97.02c.27 0 .44.13.53.38.41 1.26.87 2.34 1.38 3.26.5.9 1.16 1.96 1.98 3.15.07.15.19.23.35.23.12 0 .22-.06.29-.18l.08-.27.03-4.36c0-.3-.08-.5-.23-.6-.15-.1-.43-.17-.84-.22-.32-.06-.48-.24-.48-.56 0-.07.01-.12.03-.15.37-1.09 1.44-1.63 3.2-1.63l1.49-.03c.67 0 1.23.16 1.68.48.44.32.66.82.66 1.5v5.72c.13.08.24.12.35.12.26 0 .5-.15.7-.45 1.94-2.58 3-4.3 3.16-5.18l.05-.13c.13-.25.33-.47.62-.65.28-.19.53-.31.74-.38a.55.55 0 01.24-.05h4.13l.27.03c.35 0 .63.16.83.47.07.1.11.21.14.33a2.42 2.42 0 01.07.56v.17a6.1 6.1 0 01-.95 2.2c-.5.78-1.15 1.62-1.93 2.53-.78.9-1.27 1.5-1.46 1.78-.16.2-.24.39-.24.56 0 .13.07.28.2.45l3.9 4.63c.21.27.32.56.32.88 0 .38-.16.7-.48.95-.32.25-.7.4-1.15.43l-.45.03H20.66a.86.86 0 01-.11.02c-.4 0-.76-.16-1.1-.48l-2.5-2.96a1.38 1.38 0 00-.37-.33 38.47 38.47 0 00-.54 2.24l-.08.42a1.4 1.4 0 01-1.11 1.06l-.38.03h-2.6c-1.48 0-2.95-.64-4.42-1.92a19.3 19.3 0 01-3.95-4.94A47.52 47.52 0 01.22 6.22a1.92 1.92 0 01-.13-.73zm16 6.51c-.37 0-.7-.1-1-.29a.9.9 0 01-.46-.79V5.14c0-.34-.09-.58-.26-.72-.18-.14-.5-.21-.94-.21l-1.52.05c-.76 0-1.34.12-1.73.37.78.36 1.18.93 1.18 1.71v4.43a1.5 1.5 0 01-.54 1.04c-.32.28-.67.42-1.06.42-.54 0-.94-.24-1.23-.73a26.16 26.16 0 01-3.09-5.63L5.2 5.2 1.66 5.2c-.23 0-.36.01-.39.04-.03.02-.04.1-.04.21 0 .15.02.31.05.48l.56 1.4c1.5 3.64 3.12 6.51 4.87 8.6 1.75 2.1 3.46 3.15 5.15 3.15h2.67c.1 0 .18-.03.24-.09.05-.06.1-.17.13-.34l.05-.25.5-2.21c.15-.3.27-.5.38-.6.2-.19.43-.28.7-.28.42 0 .86.24 1.3.73l2.26 2.71c.15.22.3.33.46.33h4.4c.53 0 .8-.13.8-.38a.47.47 0 00-.09-.25L21.8 13.9c-.3-.35-.45-.73-.45-1.13 0-.4.14-.79.42-1.16.23-.33.68-.9 1.35-1.67.66-.78 1.25-1.51 1.74-2.19.5-.68.83-1.3.99-1.85l.08-.32a.37.37 0 01-.03-.17c0-.07 0-.14-.02-.19h-4.19c-.26.1-.48.25-.64.46l-.16.47c-.44 1.16-1.6 2.95-3.49 5.36-.37.34-.8.5-1.3.5z" fill="#666"/></svg>
                 </a>
               </li>
               <li class="social__item">
@@ -159,11 +173,27 @@
             </ul>
             <a class="contacts__copyright" href="">
               <span>HTML Academy</span>
-              <img src="" width="" height="" alt="">
+              <img src="img/temp.svg" width="27" height="34" alt="">
             </a>
           </div>
         </section>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.remove('main-nav--opened');
+          navMain.classList.add('main-nav--closed');
+        }
+      })
+    </script>
   </body>
 </html>

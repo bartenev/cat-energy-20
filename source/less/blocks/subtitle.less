@@ -1,14 +1,16 @@
 .subtitle {
   display: flex;
-  align-items: center;
-  position: relative;
-  margin-left: 20px;
+  align-items: flex-start;
+
+  padding-left: 20px;
   margin-bottom: 35px;
-  width: 100%;
+  // width: 100%;
   .font-size(24px, 26px);
   font-weight: 400;
 
   &::after {
+    position: relative;
+    top: 14px;
     display: block;
     flex-grow: 1;
     width: 10px;
