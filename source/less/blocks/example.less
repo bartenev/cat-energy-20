@@ -72,6 +72,37 @@
   .example__wrapper {
     margin: 0 30px;
   }
+
+  .example {
+    padding-top: 42px;
+    padding-bottom: 0;
+    background-color: @basic-white;
+  }
+
+  .example__title {
+    margin-bottom: 64px;
+  }
+
+  .example__text {
+    margin-bottom: 54px;
+  }
+
+  .example__advantages {
+    display: flex;
+    align-items: center;
+  }
+
+  .example__list {
+    width: 50%;
+  }
+
+  .example__expenses {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    .font-size(20px, 20px);
+    text-align: right;
+  }
 }
 
 @media (min-width: @desktop-width) {
