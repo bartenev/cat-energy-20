@@ -43,8 +43,32 @@
   .contacts__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin: 0 30px;
   }
+
+  .contacts {
+    padding-top: 42px;
+    padding-bottom: 45px;
+  }
+
+  .contacts__logo,
+  .contacts__copyright {
+    padding: 0;
+    border: none;
+  }
+
+  .contacts__logo-img {
+    width: 128px;
+    height: 24px;
+  }
+
+  .contacts__copyright {
+    width: 163px;
+    display: flex;
+    justify-content: space-between;
+  }
+
 }
 
 @media (min-width: @desktop-width) {

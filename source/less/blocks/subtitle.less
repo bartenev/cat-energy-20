@@ -4,11 +4,11 @@
 
   padding-left: 20px;
   margin-bottom: 35px;
-  // width: 100%;
   .font-size(24px, 26px);
   font-weight: 400;
 
-  &::after {
+  &::after,
+  &::before {
     position: relative;
     top: 14px;
     display: block;
@@ -19,26 +19,36 @@
     content: "";
     background-color: @basic-green;
   }
+
+  &::before {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .subtitle {
     margin-left: 0;
     margin-bottom: 76px;
+    padding-left: 0;
+
     .font-size(36px, 36px);
 
+    &::after,
+    &::before {
+      top: 22px;
+    }
+
     &::after {
-      margin-left: 40px;
+      margin-left: 36px;
     }
 
     &::before {
-    display: block;
-    width: 30px;
-    height: 2px;
-    margin-right: 40px;
-    content: "";
-    background-color: @basic-green;
-  }
+      display: block;
+      flex-grow: 0;
+      width: 30px;
+      margin-right: 37px;
+      margin-left: 0;
+    }
   }
 }
 

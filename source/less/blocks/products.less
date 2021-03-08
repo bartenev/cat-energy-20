@@ -1,4 +1,3 @@
-
 .products__list {
   display: grid;
 
@@ -12,6 +11,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .products {
+    padding-bottom: 34px;
+  }
+
   .products__wrapper {
     margin: 0 30px;
   }
@@ -19,7 +22,7 @@
   .products__list {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 60px;
-    grid-row-gap: 140px;
+    grid-row-gap: 141px;
   }
 }
 

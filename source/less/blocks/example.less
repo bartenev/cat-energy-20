@@ -89,19 +89,39 @@
 
   .example__advantages {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
   }
 
   .example__list {
-    width: 50%;
+    column-gap: 42px;
+  }
+
+  .example__item {
+    height: 72px;
+    width: 162px;
+  }
+
+  .example__number {
+    .font-size(30px, 37px);
+  }
+
+  .example__description {
+    top: 12px;
+    .font-size(14px, 14px);
+    background-color: @basic-white;
+    padding: 0 8px;
+    width: max-content;
   }
 
   .example__expenses {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    align-items: flex-end;
     .font-size(20px, 20px);
-    text-align: right;
+  }
+
+  .example__expense {
+    padding-top: 10px;
   }
 }
 
