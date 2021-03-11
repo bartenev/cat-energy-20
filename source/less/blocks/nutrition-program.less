@@ -33,9 +33,13 @@
     border-radius: 50%;
   }
 
-  &--slimming::after {
+  &::after {
     content: "";
     position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  &--slimming::after {
     top: 22px;
     left: 29px;
     width: 36px;
@@ -44,8 +48,6 @@
   }
 
   &--weight-gain::after {
-    content: "";
-    position: absolute;
     top: 35px;
     left: 13px;
     width: 67px;
@@ -77,7 +79,7 @@
   text-decoration: none;
   color: inherit;
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     top: 6px;
@@ -86,6 +88,11 @@
     height: 12px;
     background-image: url(../img/icon-right-arrow-long.svg);
     background-repeat: no-repeat;
+  }
+
+  &:hover::after {
+    top: 7px;
+    background-image: url(../img/icon-right-arrow-verylong.svg);
   }
 
   &:active {
@@ -110,7 +117,7 @@
   .nutrition-program__item {
     min-height: 372px;
     box-sizing: border-box;
-    padding-top: 77px;
+    padding-top: 76px;
     padding-bottom: 57px;
     padding-left: 52px;
     padding-right: 279px;
@@ -126,10 +133,26 @@
       width: 200px;
       height: 200px;
     }
+
+    &--slimming::after {
+      top: 81px;
+      left: auto;
+      right: 91px;
+      width: 140px;
+      height: 192px;
+    }
+
+    &--weight-gain::after {
+      top: 135px;
+      left: auto;
+      right: 28px;
+      width: 268px;
+      height: 112px;
+    }
   }
 
   .nutrition-program__title {
-    margin-bottom: 24px;
+    margin-bottom: 25px;
     padding-left: 0;
     .font-size(36px, 36px);
   }
@@ -142,6 +165,16 @@
 
   .nutrition-program__link {
     .font-size(20px, 30px);
+
+    &::after {
+      top: 10px;
+      left: 131px;
+    }
+
+    &:hover::after {
+      top: 11px;
+      background-image: url(../img/icon-right-arrow-verylong.svg);
+    }
   }
 }
 
