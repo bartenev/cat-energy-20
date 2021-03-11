@@ -10,6 +10,7 @@
 
 .social__img {
 
+  // .outline();
   &:hover path {
     fill: @basic-green;
   }
@@ -17,4 +18,10 @@
   &:active path {
     opacity: 0.3;
   }
+
+  &--facebook:hover path {
+    fill: transparent;
+    stroke: @basic-green;
+  }
 }
+

@@ -3,8 +3,8 @@
 }
 
 .how-it-works {
-  padding-top: 27px;
-  padding-bottom: 42px;
+  padding-top: 26px;
+  padding-bottom: 41px;
 }
 
 .how-it-works__list {
@@ -28,6 +28,49 @@
     height: 60px;
     background-color: @basic-green;
     content: "";
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 60px;
+    height: 60px;
+    background-image: url(../img/advantage-leaf@1x.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 48px auto;
+  }
+
+  &--conveniently::after {
+    background-image: url(../img/advantage-powder@1x.png);
+  }
+
+  &--one-meal::after {
+    background-image: url(../img/advantage-dining@1x.png);
+  }
+
+  &--quick-result::after {
+    background-image: url(../img/advantage-clock@1x.png);
+  }
+
+  @media (min-resolution: 2dppx) {
+    &--helpful::after {
+      background-image: url(../img/advantage-powder@2x.png);
+    }
+
+    &--conveniently::after {
+      background-image: url(../img/advantage-powder@2x.png);
+    }
+
+    &--one-meal::after {
+      background-image: url(../img/advantage-dining@2x.png);
+    }
+
+    &--quick-result::after {
+      background-image: url(../img/advantage-clock@2x.png);
+    }
   }
 }
 
