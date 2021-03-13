@@ -1,11 +1,11 @@
 .example {
-  padding-top: 27px;
+  padding-top: 26px;
   padding-bottom: 26px;
   background-color: @grey-9;
 }
 
-.example__wrapper {
-  margin: 0 20px;
+.example__info {
+  padding: 0 20px;
 }
 
 .example__list {
@@ -27,7 +27,7 @@
 }
 
 .example__title {
-  margin-bottom: 33px;
+  margin-bottom: 34px;
 }
 
 .example__text {
@@ -74,9 +74,26 @@
   }
 
   .example {
+    position: relative;
     padding-top: 42px;
-    padding-bottom: 0;
+    padding-bottom: 13px;
     background-color: @basic-white;
+    z-index: 0;
+
+    &::before {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      content: "";
+      width: 100%;
+      height: 462px;
+      background-color: @grey-9;
+      z-index: -1;
+    }
+  }
+
+  .example__info {
+    padding: 0;
   }
 
   .example__title {
@@ -128,7 +145,50 @@
 
 @media (min-width: @desktop-width) {
   .example__wrapper {
+    display: flex;
+    justify-content: space-between;
     max-width: 1220px;
     margin: 0 auto;
   }
+
+  .example {
+    position: relative;
+    padding-top: 22px;
+    padding-bottom: 23px;
+  }
+
+  .example__info {
+    width: 436px;
+  }
+
+  .example__title {
+    margin-bottom: 147px;
+  }
+
+  .example__text {
+    margin-bottom: 69px;
+  }
+
+  .example__advantages {
+    display: block;
+  }
+
+  .example__list {
+    grid-template-columns: 162px 162px;
+    margin-bottom: 26px;
+  }
+
+  .example__description {
+    background-color: @grey-9;
+  }
+
+  .example__expenses {
+    display: block;
+    text-align: left;
+  }
+
+  .example__expense:first-child {
+    margin-right: 59px;
+  }
+
 }

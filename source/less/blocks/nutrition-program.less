@@ -179,6 +179,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .nutrition-program {
+    padding-top: 82px;
+  }
+
   .nutrition-program__wrapper {
     max-width: 1220px;
     margin: 0 auto;
@@ -201,14 +205,30 @@
       width: 100px;
       height: 100px;
     }
+
+    &--slimming::after {
+      top: 41px;
+      left: 67px;
+      right: auto;
+      width: 70px;
+      height: 97px;
+    }
+
+    &--weight-gain::after {
+      top: 67px;
+      left: 33px;
+      right: auto;
+      width: 134px;
+      height: 56px;
+    }
   }
 
   .nutrition-program__title {
-    margin-bottom: 73px;
+    margin-bottom: 74px;
     padding-left: 162px;
   }
 
   .nutrition-program__description {
-    margin-bottom: 27px;
+    margin-bottom: 28px;
   }
 }
