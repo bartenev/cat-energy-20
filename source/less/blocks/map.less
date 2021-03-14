@@ -1,6 +1,10 @@
 .map {
   position: relative;
-  margin-bottom: -3px;
+  background-color: @grey-11;
+
+  &--white {
+    background-color: @basic-white;
+  }
 }
 
 .map__wrapper {
@@ -12,11 +16,9 @@
   grid-template-columns: 1fr 1fr;
   padding-top: 28px;
   padding-bottom: 26px;
-  background-color: @grey-11;
 
-  &--white {
-    background-color: @basic-white;
-  }
+
+
 }
 
 .map__invitation {
@@ -48,7 +50,7 @@
   }
 
   .map__invitation {
-    .font-size(20px, 24px);
+    .font-size(20px, 25px);
   }
 
   .map__address {

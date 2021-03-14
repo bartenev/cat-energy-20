@@ -10,7 +10,6 @@
   margin-top: 16px;
   margin-bottom: 35px;
   text-align: left;
-
 }
 
 .questionnaire__description {
@@ -18,7 +17,6 @@
   margin-bottom: 40px;
   .font-size(14px, 18px);
   text-transform: uppercase;
-
 }
 
 .questionnaire__fieldset {
@@ -41,15 +39,11 @@
   }
 }
 
-
-
 .questionnaire__legend {
   margin: 0;
   padding: 0;
   padding-left: 20px;
   margin-bottom: 34px;
-  .font-size(24px, 26px);
-
 }
 
 .questionnaire__list {
@@ -84,8 +78,8 @@
     color: @light-black;
   }
 
-    &--radio::before,
-    &--checkbox::before {
+  &--radio::before,
+  &--checkbox::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -93,6 +87,7 @@
     height: 28px;
     content: "";
 
+    box-sizing: border-box;
     border: 1px solid @grey-8;
     border-radius: 50%;
   }
@@ -130,8 +125,8 @@
 
   &--type--radio:checked + .questionnaire__label::after {
     position: absolute;
-    top: 8px;
-    left: 8px;
+    top: 7px;
+    left: 7px;
     width: 14px;
     height: 14px;
     content: "";
@@ -142,38 +137,162 @@
 
   &--type--checkbox:checked + .questionnaire__label::after {
     position: absolute;
-    top: 8px;
-    left: 7px;
+    top: 7px;
+    left: 6px;
     width: 18px;
     height: 14px;
     content: "";
 
-    background-image: url(../img/vector.svg);
+    background-image: url(../img/icon-tick.svg);
   }
 }
 
+.questionnaire__footer {
+  padding-top: 33px;
+}
+
 .questionnaire__button {
-  margin: 33px 0 21px;
+  margin-bottom: 21px;
 }
 
 .questionnaire__footnote {
-  display: flex;
-  justify-content: center;
+  display: block;
+  text-align: center;
   .font-family-alt();
   .font-size(14px, 16px);
 }
 
 @media (min-width: @tablet-width) {
   .questionnaire__wrapper {
-    margin: 0 30px;
+    margin: 0 70px;
+    margin-right: 66px;
+  }
+
+  .questionnaire__form {
+    padding-bottom: 72px;
   }
 
   .questionnaire__fieldset {
 
-    &--without-legend {
-      border-right: 1px solid @grey-12;
-      border-left: 1px solid @grey-12;
+    &--with-legend {
+      padding-top: 54px;
+      padding-bottom: 10px;
     }
+
+    &--without-legend {
+      padding-bottom: 52px;
+    }
+
+    &--with-border {
+      border: none;
+    }
+  }
+
+  .questionnaire__title {
+    position: relative;
+    left: -41px;
+    margin-top: 62px;
+    margin-bottom: 56px;
+  }
+
+  .questionnaire__description {
+    margin-bottom: 65px;
+    .font-size(20px, 30px);
+  }
+
+  .questionnaire__list {
+    grid-row-gap: 20px;
+
+    .questionnaire__fieldset--with-border & {
+      padding: 24px 28px 24px;
+      grid-row-gap: 10px;
+      border: 1px solid @grey-12;
+    }
+
+    .questionnaire__fieldset--checkbox & {
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 30px;
+      grid-column-gap: 54px;
+    }
+  }
+
+  .questionnaire__legend {
+    padding-left: 0;
+    margin-bottom: 77px;
+
+    .questionnaire__fieldset--checkbox & {
+      margin-bottom: 58px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  .questionnaire__label {
+    .font-size(20px, 30px);
+
+    &--radio,
+    &--checkbox {
+      padding-left: 60px;
+    }
+
+    &--radio::before,
+    &--checkbox::before {
+      width: 40px;
+      height: 40px;
+    }
+
+    &--text {
+      margin-right: 17px;
+    }
+
+  }
+
+  .questionnaire__input {
+    .font-size(20px, 30px);
+
+    &--type--radio:checked + .questionnaire__label::after {
+      position: absolute;
+      top: 11px;
+      left: 11px;
+      width: 18px;
+      height: 18px;
+    }
+
+    &--type--checkbox:checked + .questionnaire__label::after {
+      top: 13px;
+      left: 11px;
+    }
+
+    &--type--text {
+      padding: 10px 17px;
+    }
+
+    &--type--text--comment {
+      padding: 10px 17px;
+      height: 174px;
+    }
+  }
+
+  .questionnaire__footer {
+    padding-top: 42px;
+    display: flex;
+    align-items: center;
+  }
+
+  .questionnaire__button {
+    width: 45%;
+    padding: 16px;
+    margin: 0;
+    margin-right: 60px;
+    .font-size(20px, 20px);
+
+  }
+
+  .questionnaire__footnote {
+    vertical-align: center;
+    .font-size(16px, 16px);
   }
 }
 
