@@ -46,43 +46,45 @@
           </p>
         </div>
         <form class="questionnaire__form" method="post" action="https://echo.htmlacademy.ru">
-          <fieldset class="questionnaire__fieldset questionnaire__fieldset--without-legend">
-            <div class="questionnaire__wrapper">
-              <ul class="questionnaire__list">
-                <li class="questionnaire__item">
-                  <label class="questionnaire__label questionnaire__label--text" for="form-name">Имя:*</label>
-                  <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--text" name="name" id="form-name" type="text" placeholder="Барсик" required>
-                </li>
-                <li class="questionnaire__item">
-                  <label class="questionnaire__label questionnaire__label--text" for="form-weight">Вес (кг):*</label>
-                  <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--text" name="weight" id="form-weight" type="number" placeholder="7" min="0" required>
-                </li>
-                <li class="questionnaire__item">
-                  <label class="questionnaire__label questionnaire__label--text" for="form-age">Возраст (лет):</label>
-                  <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--text" name="age" id="form-age" type="number" placeholder="7" min="0">
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-          <fieldset class="questionnaire__fieldset questionnaire__fieldset--with-border">
-            <div class="questionnaire__wrapper">
-              <ul class="questionnaire__list">
-                <li class="questionnaire__item">
-                  <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--radio visually-hidden" name="program-type" id="form-slimming" value="slimming" type="radio" checked>
-                  <label class="questionnaire__label questionnaire__label--radio" for="form-slimming">Похудение</label>
-                </li>
-                <li class="questionnaire__item">
-                  <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--radio visually-hidden" name="program-type" id="form-weight-gain" value="weight-gain" type="radio">
-                  <label class="questionnaire__label questionnaire__label--radio" for="form-weight-gain">Набор массы</label>
-                </li>
-                <li class="questionnaire__item">
-                  <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--radio visually-hidden" name="program-type" id="form-dont-know" value="dont know" type="radio">
-                  <label class="questionnaire__label questionnaire__label--radio" for="form-dont-know">Не знаю (Нужен ваш совет)</label>
-                </li>
-              </ul>
-            </div>
-          </fieldset>
-          <fieldset class="questionnaire__fieldset questionnaire__fieldset--with-legend">
+          <div class="questionnaire__group questionnaire__wrapper">
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--without-legend">
+              <div class="questionnaire__wrapper">
+                <ul class="questionnaire__list">
+                  <li class="questionnaire__item">
+                    <label class="questionnaire__label questionnaire__label--text" for="form-name">Имя:*</label>
+                    <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--text" name="name" id="form-name" type="text" placeholder="Барсик" required>
+                  </li>
+                  <li class="questionnaire__item">
+                    <label class="questionnaire__label questionnaire__label--text" for="form-weight">Вес (кг):*</label>
+                    <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--text" name="weight" id="form-weight" type="number" placeholder="7" min="0" required>
+                  </li>
+                  <li class="questionnaire__item">
+                    <label class="questionnaire__label questionnaire__label--text" for="form-age">Возраст (лет):</label>
+                    <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--text" name="age" id="form-age" type="number" placeholder="7" min="0">
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+            <fieldset class="questionnaire__fieldset questionnaire__fieldset--with-border">
+              <div class="questionnaire__wrapper">
+                <ul class="questionnaire__list">
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--radio visually-hidden" name="program-type" id="form-slimming" value="slimming" type="radio" checked>
+                    <label class="questionnaire__label questionnaire__label--radio" for="form-slimming">Похудение</label>
+                  </li>
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--radio visually-hidden" name="program-type" id="form-weight-gain" value="weight-gain" type="radio">
+                    <label class="questionnaire__label questionnaire__label--radio" for="form-weight-gain">Набор массы</label>
+                  </li>
+                  <li class="questionnaire__item">
+                    <input class="questionnaire__input questionnaire__input--type questionnaire__input--type--radio visually-hidden" name="program-type" id="form-dont-know" value="dont know" type="radio">
+                    <label class="questionnaire__label questionnaire__label--radio" for="form-dont-know">Не знаю (Нужен ваш совет)</label>
+                  </li>
+                </ul>
+              </div>
+            </fieldset>
+          </div>
+          <fieldset class="questionnaire__fieldset questionnaire__fieldset--with-legend questionnaire__fieldset--contacts">
             <h2 class="questionnaire__legend subtitle">
               Контактные данные<br>
               (владельца кота)

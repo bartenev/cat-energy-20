@@ -1,13 +1,17 @@
 .questionnaire__wrapper {
     margin: 0 20px;
+
+    .questionnaire__group& {
+      margin: 0;
+    }
   }
 
-.questionnaire__form {
+.questionnaire {
+  padding-top: 16px;
   padding-bottom: 32px;
 }
 
 .questionnaire__title {
-  margin-top: 16px;
   margin-bottom: 35px;
   text-align: left;
 }
@@ -168,7 +172,8 @@
     margin-right: 66px;
   }
 
-  .questionnaire__form {
+  .questionnaire {
+    padding-top: 62px;
     padding-bottom: 72px;
   }
 
@@ -191,7 +196,6 @@
   .questionnaire__title {
     position: relative;
     left: -41px;
-    margin-top: 62px;
     margin-bottom: 56px;
   }
 
@@ -300,6 +304,69 @@
   .questionnaire__wrapper {
     max-width: 1220px;
     margin: 0 auto;
+
+    .questionnaire__group& {
+      margin: 0 auto;
+    }
   }
 
+  .questionnaire {
+    padding-top: 72px;
+    padding-bottom: 82px;
+  }
+
+  .questionnaire__description {
+    margin-bottom: 67px;
+  }
+
+  .questionnaire__group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding-bottom: 14px;
+  }
+
+  .questionnaire__fieldset {
+
+    &--with-legend {
+      padding-top: 54px;
+      padding-bottom: 12px;
+    }
+
+    &--without-legend {
+      padding: 0;
+    }
+
+    &--with-border {
+      padding: 0;
+    }
+  }
+
+  .questionnaire__list {
+
+    .questionnaire__fieldset--contacts & {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 80px;
+    }
+
+    .questionnaire__fieldset--checkbox & {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-column-gap: 80px;
+    }
+  }
+
+  .questionnaire__title {
+    position: static;
+    margin-bottom: 56px;
+  }
+
+  .questionnaire__footer {
+    padding-top: 47px;
+  }
+
+  .questionnaire__button {
+    width: 46.6%;
+    margin-right: 80px;
+  }
 }
