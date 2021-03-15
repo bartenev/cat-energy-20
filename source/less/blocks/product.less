@@ -86,21 +86,28 @@
     border: none;
   }
 
-  .product__link--img {
-    position: absolute;
-    top: -20px;
-    left: 40%;
-    width: 168px;
-    height: 200px;
+  .product__link {
+
+    &--img {
+      position: absolute;
+      top: -45px;
+      left: calc(50% - 162px);
+      width: auto;
+      height: auto;
+    }
+
+    &--img--big {
+      top: -70px;
+    }
   }
 
   .product__img {
     width: 324px;
     height: 174px;
-  }
 
-  .product__img--big {
-    height: 208px;
+    .product__link--img--big & {
+      height: 208px;
+    }
   }
 
   .product__title {
