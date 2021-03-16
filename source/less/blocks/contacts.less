@@ -32,14 +32,21 @@
   .font-size(16px, 18px);
   text-decoration: none;
   color: @grey-1;
+  user-select: none;
+
+  & svg {
+    color: @grey-2;
+  }
+
+  &:hover svg {
+    color: @basic-green;
+  }
 
   &:active {
     opacity: 0.3;
   }
 
-  &:hover path {
-    fill: @basic-green;
-  }
+
 }
 
 @media (min-width: @tablet-width) {

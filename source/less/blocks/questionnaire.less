@@ -63,6 +63,7 @@
 }
 
 .questionnaire__item {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -100,6 +101,19 @@
     border-radius: 0;
   }
 
+  &--radio:hover::before,
+  &--checkbox:hover::before {
+    border: 1px solid @grey-3;
+  }
+
+  &--radio::active,
+  &--checkbox::active,
+  &--radio::focus,
+  &--checkbox::focus {
+    // opacity: 0.3;
+  }
+
+
   &--text {
     margin-right: 13px;
   }
@@ -117,6 +131,42 @@
     padding: 10px 14px;
     padding-bottom: 9px;
     border: 1px solid @grey-8;
+  }
+
+  &--type--text--email,
+  &--type--text--phone {
+    padding-right: 40px;
+  }
+
+  &--type--text:invalid {
+    border: 1px solid @red;
+  }
+
+  &--type--text:hover {
+    border: 1px solid @grey-5;
+  }
+
+  &--type--text:active,
+  &--type--text:focus {
+    border: 1px solid @grey-1;
+    outline: none;
+  }
+
+  &--type--text--email:invalid + .questionnaire__icon,
+  &--type--text--phone:invalid + .questionnaire__icon {
+    color: @red;
+  }
+
+  &--type--text--email:hover + .questionnaire__icon,
+  &--type--text--phone:hover + .questionnaire__icon {
+    color: @light-black;
+  }
+
+  &--type--text--email:active + .questionnaire__icon,
+  &--type--text--phone:active + .questionnaire__icon,
+  &--type--text--email:focus + .questionnaire__icon,
+  &--type--text--phone:focus + .questionnaire__icon, {
+    color: @basic-green;
   }
 
   &--type--text--comment {
@@ -148,6 +198,15 @@
     content: "";
 
     background-image: url(../img/icon-tick.svg);
+  }
+}
+
+.questionnaire__icon {
+  position: absolute;
+  right: 16px;
+
+  &--phone {
+    right: 13px;
   }
 }
 
@@ -213,6 +272,10 @@
       border: 1px solid @grey-12;
     }
 
+    .questionnaire__fieldset--with-border &:hover {
+      border: 1px solid @grey-5;
+    }
+
     .questionnaire__fieldset--checkbox & {
       grid-template-columns: 1fr 1fr;
       grid-row-gap: 30px;
@@ -273,10 +336,19 @@
       padding: 10px 17px;
     }
 
+    &--type--text--email,
+    &--type--text--phone {
+      padding-right: 45px;
+    }
+
     &--type--text--comment {
       padding: 10px 17px;
       height: 174px;
     }
+  }
+
+  .questionnaire__icon {
+    right: 18px;
   }
 
   .questionnaire__footer {
