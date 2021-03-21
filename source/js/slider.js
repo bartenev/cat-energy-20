@@ -8,6 +8,7 @@ buttonBefore.addEventListener('click', function() {
   if (slideBefore.classList.contains('visually-hidden')) {
     slideBefore.classList.remove('visually-hidden');
     slideAfter.classList.add('visually-hidden');
+
     buttonBefore.disabled = true;
     buttonAfter.disabled = false;
   }
@@ -17,8 +18,8 @@ buttonAfter.addEventListener('click', function() {
   if (slideAfter.classList.contains('visually-hidden')) {
     slideAfter.classList.remove('visually-hidden');
     slideBefore.classList.add('visually-hidden');
+
     buttonAfter.disabled = true;
     buttonBefore.disabled = false;
-
   }
 })
