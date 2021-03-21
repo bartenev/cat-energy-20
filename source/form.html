@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
   <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat energy</title>
+    <link rel="preload" href="fonts/oswald-v36-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald-v36-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -162,7 +164,7 @@
               <span class="map__city">Санкт-Петербург</span>
             </p>
           </div>
-          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.32085871617598!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613564100023!5m2!1sru!2sru" width="100%" height="362" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.32085871617598!3d59.938719169054046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1613564100023!5m2!1sru!2sru" width="300" height="362" title="Наш адрес: Санкт-Петербург, ул. Большая Конюшенная, д. 19/8" loading="lazy" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         </section>
         <section class="page-footer__contacts contacts">
           <div class="contacts__wrapper">
@@ -192,7 +194,7 @@
                 </a>
               </li>
             </ul>
-            <a class="contacts__copyright" href="">
+            <a class="contacts__copyright" href="htmlacademy.ru">
               <span>HTML Academy</span>
               <svg width="40" height="40">
                 <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
@@ -202,21 +204,6 @@
         </section>
       </div>
     </footer>
-    <!-- <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.remove('main-nav--opened');
-          navMain.classList.add('main-nav--closed');
-        }
-      })
-    </script> -->
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>
