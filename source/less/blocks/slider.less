@@ -83,7 +83,36 @@
   }
 
   .slider__button {
+    position: relative;
+    width: max-content;
+    padding: 0;
+    padding-top: 1px;
+    margin: 0 10px;
     .font-size(20px, 30px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg height='1' width='2' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' x='0' y='0' fill='%23c2c2c2' /%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+    }
+
+    &:hover::before {
+      background-image: none;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &:active::before {
+      display: none;
+    }
+
+    &[disabled]::before {
+      display: none;
+    }
   }
 }
 
@@ -105,7 +134,6 @@
   }
 
   .slider__button {
-    padding: 0;
-    width: max-content;
+    margin: 0;
   }
 }
